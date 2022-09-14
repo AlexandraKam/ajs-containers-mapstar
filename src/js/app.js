@@ -1,7 +1,7 @@
 export default class Settings {
-  constructor() {
+  constructor(theme, music, difficulty) {
     this.defaultSettings = new Map([['theme', 'dark'], ['music', 'trance'], ['difficulty', 'easy']]);
-    this.userSettings = new Map();
+    this.userSettings = new Map(theme, music, difficulty);
   }
 
   get settings() {
